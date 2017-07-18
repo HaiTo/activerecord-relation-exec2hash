@@ -1,8 +1,6 @@
 # Activerecord::Relation::Exec2hash
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/activerecord/relation/exec2hash`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+`ActiveRecord::Relation.exec_to_hash` is getting the query result as a hash, does not instantiate.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+AwesomeModel.all.exec_to_hash
+#=> [{id: 1, key: 'value1'}, {id: 2, key: 'value2'}, {id: 3, key: 'value3'}, ...]
+
+AwesomeModel.where(id: [1,2]).exec_to_hash
+#=> [{id: 1, key: 'value1'}, {id: 2, key: 'value2'}]
+
+# Error!
+# Becouse `exec to hash` method implemented in ActiveRecord::Relation.
+# As a similar case of `where.exec_to_hash`, and more.
+AwesomeModel.find_by(id: 2).exec_to_hash
+NoMethodError: undefined method `exec_to_hash' for #<AwesomeModel:0x007fa0c321ae10>
+```
 
 ## Development
 

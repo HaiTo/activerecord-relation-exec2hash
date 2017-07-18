@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["HaiTo"]
   spec.email         = ["rilinwing@gmail.com"]
 
-  spec.summary       = 'active record relation exec query and got result to hash.'
-  spec.description   = 'active record relation exec query and got result to hash.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'you can `AwesomeModel.all.exec2hash => [{id: 1, key: value}, ...]`'
+  spec.description   = 'you can `AwesomeModel.all.exec2hash => [{id: 1, key: value}, ...]`'
+  spec.homepage      = "https://github.com/HaiTo/activerecord-relation-exec2hash"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

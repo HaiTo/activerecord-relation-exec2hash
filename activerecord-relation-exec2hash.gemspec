@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "activerecord/relation/exec2hash/version"
+require 'activerecord/relation/exec2hash'
 
 Gem::Specification.new do |spec|
   spec.name          = "activerecord-relation-exec2hash"
   spec.version       = Activerecord::Relation::Exec2hash::VERSION
   spec.authors       = ["HaiTo"]
-  spec.email         = ["thewordr2.ver.xes@gmail.com"]
+  spec.email         = ["rilinwing@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = 'active record relation exec query and got result to hash.'
+  spec.description   = 'active record relation exec query and got result to hash.'
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
@@ -33,4 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"
+
+  spec.add_dependency 'activerecord', '>= 4.2.0'
 end

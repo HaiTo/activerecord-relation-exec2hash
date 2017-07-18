@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'activerecord/relation/exec2hash'
+require 'activerecord/relation/exec2hash/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "activerecord-relation-exec2hash"
@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_development_dependency 'sqlite3'
 
   spec.add_dependency 'activerecord', '>= 4.2.0'
 end
